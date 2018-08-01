@@ -104,16 +104,6 @@ html {
     padding-bottom: 5%;
 }
 
-.portfolioImage {
-    height: 300px;
-    width: 360px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    overflow: hidden;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-  }
-
 .emptySection {
     padding-top: 6%
 }
@@ -172,11 +162,12 @@ html {
     position: absolute;
     top: 10%;
     left: 0;
-    width: 90%;
     font-size: .7em;
-    padding-left: 5%;
+    padding-left: 30px;
+    padding-right: 30px;
     opacity: 0;
     color: white;
+    width: 390px;
 }
 
 #logo {
@@ -185,14 +176,25 @@ html {
 
 .caption {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
-    width: 95%;
-    padding-left: 5%;
+    width: 390px;
+    padding-left: 24px;
+    padding-right: 24px;
     font-size: 18px;
     opacity: 0;
     color: white;
 }
+
+.portfolioImage {
+    height: 300px;
+    width: 360px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
 
 .documentContainer:hover .portfolioImage { 
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
@@ -443,4 +445,7 @@ img {
   border-bottom: 1px;
  }
 
+.resumeTitle {
+  font-size: 1.5em;
+}
 

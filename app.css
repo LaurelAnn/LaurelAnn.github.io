@@ -170,9 +170,10 @@ html {
 
 .imgTitle {
     position: absolute;
-    top: 5%;
+    top: 7%;
     left: 0;
     width: 95%;
+    font-size: .7em;
     padding-left: 7%;
     opacity: 0;
     color: white;
@@ -242,10 +243,17 @@ img {
  }
 
  h1 {
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+  margin-top: 0px;
  }
 
+ h2 {
+  margin-top: 5px;
+ }
 
+#titleName {
+  font-size: 1em;
+}
 
 .btn-send:hover{
     background-color: white;
@@ -427,6 +435,8 @@ img {
 
 #hrTitle {
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px;
  }
 
 

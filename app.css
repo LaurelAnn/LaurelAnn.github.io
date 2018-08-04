@@ -11,20 +11,8 @@ body {
 
 body,
 html {
-    width: 100%;
-    height: 100%;
     font-family: "Lato";
     color: white;
-}
-
-:root {
-    --background-1:#485670;
-    --background-2:#151A24;
-    --accent-color-1:#C6A33B;
-    --accent-color-2:#FF533D;
-    --title-color:white;
-    --resume-border: #C6A33B;
-    --resume-diamond:#FF533D;
 }
 
 :root {
@@ -36,9 +24,6 @@ html {
     --resume-border: #D7A14C;
     --resume-diamond:#FF533D;
 }
-
-
-
 
 .navbar-inverse {
       background: transparent;
@@ -143,9 +128,6 @@ html {
     vertical-align: top;
 }
 
-.test { 
-
- }
 
 .middle {
   transition: .5s ease;
@@ -245,7 +227,7 @@ img {
 
  .form-control{
     background-color: lightgrey;
-    color: whitesmoke;
+    color: black;
  }
 
  h1 {

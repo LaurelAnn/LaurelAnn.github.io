@@ -435,7 +435,7 @@ img {
   font-size: 1.5em;
 }
 
-@media screen and (max-width: 600px) {
+@media handheld{
   .mobile-colorOn { 
       -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
       filter: grayscale(0%); 
@@ -445,6 +445,5 @@ img {
   .mobile-opacityOn { 
     opacity: 1;
    }
-
 }
 

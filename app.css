@@ -435,7 +435,7 @@ img {
   font-size: 1.5em;
 }
 
-@media handheld{
+@media (any-hover: none) {
   .mobile-colorOn { 
       -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
       filter: grayscale(0%); 

@@ -1,75 +1,54 @@
 <?php
-/*
- *  CONFIGURE EVERYTHING HERE
- */
 
-// an email address that will be in the From field of the email.
-$from = 'Laurelann@github.com';
+  print_r($_POST);
+  die;
+  // Change this to YOUR address
+  $recipient = 'dshakeri91@gmail.com';
+  $email = $_POST['email'];
+  $realName = $_POST['realname'];
+  $subject = $_POST['subject'];
+  $body = $_POST['body'];
+  # We'll make a list of error messages in an array
+  $messages = array();
+# Allow only reasonable email addresses
+if (!preg_match("/^[\w\+\-.~]+\@[\-\w\.\!]+$/", $email)) {
+$messages[] = "That is not a valid email address.";
+}
+# Allow only reasonable real names
+if (!preg_match("/^[\w\ \+\-\'\"]+$/", $realName)) {
+$messages[] = "The real name field must contain only " .
+"alphabetical characters, numbers, spaces, and " .
+"reasonable punctuation. We apologize for any inconvenience.";
+}
+# CAREFUL: don't allow hackers to sneak line breaks and additional
+# headers into the message and trick us into spamming for them!
+$subject = preg_replace('/\s+/', ' ', $subject);
+# Make sure the subject isn't blank afterwards!
+if (preg_match('/^\s*$/', $subject)) {
+$messages[] = "Please specify a subject for your message.";
+}
 
-// an email address that will receive the email with the output of the form
-$sendTo = 'dshakeri91@gmail.com';
-
-// subject of the email
-$subject = 'New message from contact form';
-
-// form field names and their translations.
-// array variable name => Text to appear in the email
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
-
-// message that will be displayed when everything is OK :)
-$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
-
-// If something goes wrong, we will display this message.
-$errorMessage = 'There was an error while submitting the form. Please try again later';
-
-/*
- *  LET'S DO THE SENDING
- */
-
-// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(E_ALL & ~E_NOTICE);
-
-try
-{
-
-    if(count($_POST) == 0) throw new \Exception('Form is empty');
-            
-    $emailText = "You have a new message from your contact form\n=============================\n";
-
-    foreach ($_POST as $key => $value) {
-        // If the field exists in the $fields array, include it in the email 
-        if (isset($fields[$key])) {
-            $emailText .= "$fields[$key]: $value\n";
-        }
+$body = $_POST['body'];
+# Make sure the message has a body
+if (preg_match('/^\s*$/', $body)) {
+$messages[] = "Your message was blank. Did you mean to say " .
+"something?"; 
+}
+  if (count($messages)) {
+    # There were problems, so tell the user and
+    # don't send the message yet
+    foreach ($messages as $message) {
+      echo("<p>$message</p>\n");
     }
-
-    // All the neccessary headers for the email.
-    $headers = array('Content-Type: text/plain; charset="UTF-8";',
-        'From: ' . $from,
-        'Reply-To: ' . $from,
-        'Return-Path: ' . $from,
-    );
-    
-    // Send email
-    mail($sendTo, $subject, $emailText, implode("\n", $headers));
-
-    $responseArray = array('type' => 'success', 'message' => $okMessage);
-}
-catch (\Exception $e)
-{
-    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
-}
-
-
-// if requested by AJAX request return JSON response
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-
-    header('Content-Type: application/json');
-
-    echo $encoded;
-}
-// else just display the message
-else {
-    echo $responseArray['message'];
-}
+    echo("<p>Click the back button and correct the problems. " .
+      "Then click Send Your Message again.</p>");
+  } else {
+    # Send the email - we're done
+mail($recipient,
+      $subject,
+      $body,
+      "From: $realName <$email>\r\n" .
+      "Reply-To: $realName <$email>\r\n"); 
+    echo("<p>Your message has been sent. Thank you!</p>\n");
+  }
+?>

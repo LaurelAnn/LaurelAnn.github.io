@@ -11,6 +11,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     height:100%;
+    width: 100%;
     font-family: 'Times New Roman', serif;
 }
 
@@ -38,6 +39,7 @@ html {
     --title-color:white;
     --resume-border: rgba(1,68,87,1);
     --resume-diamond: rgba(255,237,89);
+    --hover-color: #9AF3F9;
 }
 
 .navbar-inverse {
@@ -461,4 +463,182 @@ img {
     opacity: 1;
    }
 }
+
+.mb_-30px {
+  margin-bottom: -30px !important;
+}
+
+.kayo-icon-list-box {
+  text-align: center;
+  position: relative;
+  padding-top: 60px;
+}
+.kayo-icon-list-box .kayo-icon-box-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.kayo-icon-list-box .kayo-list-info {
+  padding: 60px 15px 15px;
+  overflow: hidden;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+.kayo-icon-list-box .kayo-list-info h4 {
+  font-size: 16px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  margin: 20px 0 13px;
+  font-weight: 600;
+}
+.kayo-icon-list-box .kayo-list-info p {
+  margin-bottom: 0;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 24px;
+  font-weight: 300;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  position: relative;
+  top: 50px;
+}
+.kayo-icon-list-box:hover .kayo-list-info p {
+  opacity: 1;
+  top: 0;
+}
+
+.kayo-icon-box-container .kayo-icon-box:hover:after, .kayo-icon-box-container .kayo-icon-box:hover:before, .kayo-icon-list-box:hover .kayo-icon-box-container .kayo-icon-box:after, .kayo-icon-list-box:hover .kayo-icon-box-container .kayo-icon-box:before {
+  border-bottom-color: var(--hover-color);
+}
+
+.content-txt-1, .kayo-icon-list-box .kayo-list-info p, .home .intro-section .kayo-hello, .home .intro-section .kayo-work-description, .my-information .kayo-info-detail p, .testimonials .testi-user-info h5, .testimonials .testi-desc-box p, .port-box .kayo-taps li, .education-workHistory .timeline-content .timeline-box .timeline-info .timeline-info-details p {
+  color: #BBB;
+}
+
+.main-bg-rgba, .kayo-btn-1.btn-rgba, .kayo-icon-list-box:hover .kayo-list-info, .contact-form .kayo-form .form-control {
+  background: var(--resume-border);
+}
+
+.main-themeColor-bg, .sakura-btn:hover, .sakura-btn:focus, .sakura-btn:active, .sakura-btn.btn-inverse, .scrollToTop:hover, .kayo-btn-1:before, .kayo-icon-box-container .kayo-icon-box:hover, .kayo-icon-list-box:hover .kayo-icon-box-container .kayo-icon-box, .slide-menu-container .slide-menu.kayo-menu-style-2 .kayo-links li.active a i, .testimonials .testi-desc-box:before, .testimonials .testi-desc-box i, .port-box .portfolio-items .portfolio-item .port-data .port-data-back-card .port-show-info:hover, .kayo-skills .technical-skills .progress-bar-container .progress.active .progress-bar, .kayo-skills .technical-skills .progress-bar-container .progress .progress-bar.active, .kayo-skills .technical-skills .progress-bar-container.primary-style .timer, .normal-post .entry-header .post-category a:hover, .normal-post .entry-header .post-share li a:hover, .normal-post .entry-header .post-share li span:hover, .normal-post .entry-header .post-share li span, .normal-post .entry-footer .entry-tags a:hover, .appsLand-navbar.active-navbar .menu-toggle .chart {
+  background: var(--hover-color);
+}
+
+.kayo-service .kayo-icon-list-box {
+  margin-bottom: 30px;
+}
+
+.kayo-icon-box-container {
+  padding: 20px;
+  position: relative;
+}
+.kayo-icon-box-container .kayo-icon-box {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  text-align: center;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.kayo-icon-box-container .kayo-icon-box .kayo-icon {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  font-size: 50px;
+  line-height: 80px;
+}
+.kayo-icon-box-container .kayo-icon-box:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - 40px);
+  width: 80px;
+  border-bottom: 3px solid var(--resume-border);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.kayo-icon-box-container .kayo-icon-box:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: calc(50% - 40px);
+  width: 80px;
+  border-bottom: 3px solid var(--resume-border);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.kayo-icon-box-container .kayo-icon-box:hover:after, .kayo-icon-box-container .kayo-icon-box:hover:before, .kayo-icon-list-box:hover .kayo-icon-box-container .kayo-icon-box:after, .kayo-icon-list-box:hover .kayo-icon-box-container .kayo-icon-box:before {
+  border-bottom-color: var(--hover-color);
+}
+
+
+.section-intro .kayo-icon-box-container {
+  padding: 30px;
+}
+.section-intro .kayo-icon-box-container .kayo-icon-box {
+  width: 120px;
+  height: 120px;
+}
+.section-intro .kayo-icon-box-container .kayo-icon-box .kayo-icon {
+  line-height: 120px;
+}
+.section-intro .kayo-icon-box-container .kayo-icon-box:after {
+  left: calc(50% - 60px);
+  width: 120px;
+}
+.section-intro .kayo-icon-box-container .kayo-icon-box:before {
+  left: calc(50% - 60px);
+  width: 120px;
+}
+
+.kayo-icon-list-box .kayo-icon-box-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+  .kayo-icon-box-container .kayo-icon-box .kayo-icon {
+    font-size: 35px;
+  }
+
+
+  .section-intro .kayo-icon-box-container .kayo-icon-box {
+    width: 80px;
+    height: 80px;
+  }
+  .section-intro .kayo-icon-box-container .kayo-icon-box .kayo-icon {
+    line-height: 80px;
+    font-size: 27px;
+  }
+  .section-intro .kayo-icon-box-container .kayo-icon-box:after {
+    left: calc(50% - 40px);
+    width: 80px;
+  }
+  .section-intro .kayo-icon-box-container .kayo-icon-box:before {
+    left: calc(50% - 40px);
+    width: 80px;
+  
+
 

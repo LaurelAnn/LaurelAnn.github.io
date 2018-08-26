@@ -420,20 +420,20 @@ img {
   border-bottom: 1px solid var(--resume-border);
 }
 .education-workHistory .timeline-content .timeline-box .timeline-info .timeline-info-header h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 7px;
 }
 .education-workHistory .timeline-content .timeline-box .timeline-info .timeline-info-header p {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
 }
 .education-workHistory .timeline-content .timeline-box .timeline-info .timeline-info-details p {
   font-weight: 400;
   margin-bottom: 0;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 24px;
 }
 
@@ -450,18 +450,6 @@ img {
 
 .resumeTitle {
   font-size: 1.5em;
-}
-
-@media (any-hover: none) {
-  .mobile-colorOn { 
-      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(0%); 
-      opacity: .4;
-   }
-
-  .mobile-opacityOn { 
-    opacity: 1;
-   }
 }
 
 .mb_-30px {
@@ -639,6 +627,23 @@ img {
   .section-intro .kayo-icon-box-container .kayo-icon-box:before {
     left: calc(50% - 40px);
     width: 80px;
-  
+}
+
+@media (any-hover: none) {
+  .mobile-colorOn { 
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%); 
+      opacity: .4;
+   }
+
+  .mobile-opacityOn { 
+    opacity: 1;
+   }
+
+   #mobile-opacityOn { 
+    opacity: 1;
+    top: 0;
+   }
+}  
 
 
